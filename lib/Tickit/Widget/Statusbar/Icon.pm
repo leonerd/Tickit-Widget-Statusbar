@@ -22,6 +22,7 @@ string (typically a single Unicode character).
 use constant WIDGET_PEN_FROM_STYLE => 1;
 use constant CAN_FOCUS => 0;
 use Tickit::Style;
+use Tickit::Utils qw(textwidth);
 
 BEGIN {
 	style_definition ':error' =>
@@ -37,7 +38,7 @@ sub new {
 	$self;
 }
 
-sub cols { 1 }
+sub cols { textwidth($_[0]->{icon} // 'X') }
 
 sub lines { 1 }
 
