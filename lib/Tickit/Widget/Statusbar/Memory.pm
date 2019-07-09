@@ -15,7 +15,6 @@ Integrated as part of the default status bar.
 
 =cut
 
-use constant CLEAR_BEFORE_RENDER => 0;
 use constant WIDGET_PEN_FROM_STYLE => 1;
 use constant CAN_FOCUS => 0;
 
